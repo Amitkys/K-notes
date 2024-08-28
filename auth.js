@@ -23,7 +23,7 @@ passport.use(new GoogleStrategy({
                 firstName: profile.name.givenName,
                 lastName: profile.name.familyName,
                 displayName: profile.displayName,
-                email: profile.emails[0].value,  // assuming the user has an email
+                email: profile.emails[0].value,  // assuming the user has an email, this will reture one email
                 email_verified: profile.emails[0].verified,
                 provider: profile.provider,
                 profilePhoto: profile.photos[0].value // assuming the user has a profile photo
