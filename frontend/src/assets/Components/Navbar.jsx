@@ -3,7 +3,7 @@ export function Navbar() {
         <>
             <div className="navbar text-white bg-black">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl">amitkys</a>
                 </div>
                 <div className="flex-none gap-2">
                     <div>
