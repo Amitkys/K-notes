@@ -1,13 +1,13 @@
-export function Navbar() {
+export function Navbar({userData}) {
     return(
         <>
             <div className="navbar text-white bg-black">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">amitkys</a>
+                    <a className="btn btn-ghost text-xl">{userData.msg}</a>
                 </div>
                 <div className="flex-none gap-2">
                     <div>
-                        <h3>hi</h3>
+                        <h3>{userData.age}</h3>
                     </div>
                     <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

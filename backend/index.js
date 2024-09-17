@@ -56,7 +56,7 @@ function isLoggedIn(req, res, next) {
 }
 
 app.get('/kys', (req, res) => {
-    res.send({msg: 'message from Backend'});
+    res.send({msg: 'amit', age: 35});
 })
 
 
