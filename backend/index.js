@@ -53,7 +53,7 @@ function isLoggedIn(req, res, next) {
 }
 
 app.get('/kys', (req, res) => {
-    res.send({msg: 'msg from Backend'});
+    res.send({msg: 'message from Backend'});
 })
 
 
