@@ -5,6 +5,7 @@ const passport = require('passport');
 const cors = require('cors');
 const app = express();
 const Notes = require('./models/Notes.js');
+const User = require('./models/User.js');
 require('./auth.js');
 
 app.set('view engine', 'ejs');
@@ -52,11 +53,17 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/login');
+    res.redirect('/auth/google');
 }
 
 app.get('/kys', (req, res) => {
     res.send({msg: 'amit', age: 35});
+});
+
+app.get('/user', isLoggedIn, async(req, res) => {
+    console.log(req.user.id)
+    const user = await User.find({userId: req.user.id});
+    console.log(user);
 })
 
 
