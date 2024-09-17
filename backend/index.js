@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
+const cors = require('cors');
 const app = express();
 const Notes = require('./models/Notes.js');
 require('./auth.js');
@@ -23,6 +24,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 // Middleware to parse JSON request bodies (use it if you using axios)
 app.use(express.json());
+
+app.use(cors());
 
 // Async function to connect to MongoDB
 async function main() {
