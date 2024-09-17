@@ -3,9 +3,10 @@ import { Try } from "./assets/Components/Try";
 import { Navbar } from "./assets/Components/Navbar";
 import axios from 'axios';
 function App() {
-  useEffect(() => {
-    
-  }, []);
+  
+  axios.get('http://localhost:3000/kys')
+  .then((response) => console.log(response.data.msg));
+
   return (
     <>
     <Navbar></Navbar>
