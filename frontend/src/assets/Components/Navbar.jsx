@@ -19,7 +19,7 @@ export function Navbar() {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box  mt-3  p-2 shadow">                        
+                        className="menu menu-sm dropdown-content bg-black rounded-box  mt-3  p-2 shadow">                        
                         <li><a className="btn btn-xs border-none">Profile</a></li>
                         <li><a>Settings</a></li>
                         <li><a>Logout</a></li>
