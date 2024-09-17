@@ -56,9 +56,6 @@ app.get('/kys', (req, res) => {
     res.send({msg: 'hello from kys backend'});
 })
 
-app.post('/kys', (req, res) => {
-    res.send({msg: 'hello from kys backend'});
-})
 
 app.get('/', isLoggedIn, async (req, res) => {
     const allData = await Notes.find({userId: req.user.id});
