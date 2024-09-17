@@ -44,7 +44,7 @@ async function main() {
 }
 app.get('/auth/google/callback', 
     passport.authenticate('google', {
-        successRedirect: '/',
+        successRedirect: 'http://localhost:5173',
         failureRedirect: '/login'
     })
 );
@@ -53,17 +53,21 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/auth/google');
+    res.redirect('/login'); // if browser have only one email address (already in db) it login automatically
 }
 
-app.get('/kys', (req, res) => {
-    res.send({msg: 'amit', age: 35});
-});
+// app.get('/kys', (req, res) => {
+//     if(req.isAuthenticated()){
+//         console.log('true');
+//     }else{
+//         console.log('false');
+//     }
+// });
 
 app.get('/user', isLoggedIn, async(req, res) => {
     console.log(req.user.id)
-    const user = await User.find({userId: req.user.id});
-    console.log(user);
+    const user = await User.findById(req.user.id);
+    res.send({user});
 })
 
 

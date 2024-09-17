@@ -1,4 +1,13 @@
-export function Navbar({userData}) {
+import { useEffect, useState } from "react"
+
+export function Navbar() {
+    const [userData, setUserData] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3000/user')
+        .then((response) =>{
+            setUserData(response.data);
+        });
+    }, [])
     return(
         <>
             <div className="navbar text-white bg-black">
