@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Try } from "./assets/Components/Try";
 import { Navbar } from "./assets/Components/Navbar";
+import axios from 'axios';
 function App() {
+  useEffect(() => {
+    
+  }, []);
   return (
     <>
     <Navbar></Navbar>
