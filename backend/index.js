@@ -52,6 +52,10 @@ function isLoggedIn(req, res, next) {
     res.redirect('/login');
 }
 
+app.get('/kys', (req, res) => {
+    res.send({msg: 'hello from kys backend'});
+})
+
 app.get('/', isLoggedIn, async (req, res) => {
     const allData = await Notes.find({userId: req.user.id});
     
