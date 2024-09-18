@@ -1,19 +1,14 @@
-// const time = new Date('2024-08-28T18:06:23.375Z');
+// about date and time 
+/*
+const date = new Date();
+const formattedDate = date.toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
 
-// // Format the date as "28 Aug 2024"
-// const optionsDate = { day: 'numeric', month: 'short', year: 'numeric' };
-// const formattedDate = time.toLocaleDateString('en-GB', optionsDate);
+console.log(date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short'  }));
+// Example output: "Sep 18"
 
-// // Format the time as "11:36PM"
-// const optionsTime = { hour: 'numeric', minute: 'numeric', hour12: true };
-// const formattedTime = time.toLocaleTimeString('en-US', optionsTime).replace(' ', '');
 
-// // Combine both date and time
-// const formattedDateTime = `${formattedDate}, ${formattedTime}`;
+console.log(formattedDate); // Output: "18 Sep 2024"
 
-// console.log(formattedDateTime);
 
-const newDate = new Date();
-
-console.log(newDate.getMinutes());
-
+// learn more: https://chatgpt.com/share/66ea29f3-c0f4-8012-b74f-f932f30b07bb
+*/
